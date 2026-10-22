@@ -1,0 +1,203 @@
+{
+  "gate_tests": [
+    "test_outputs.py::test_market_size_boundary",
+    "test_outputs.py::test_market_json_structure",
+    "test_outputs.py::test_market_underlying_boundaries",
+    "test_outputs.py::test_market_numeric_types_and_finiteness",
+    "test_outputs.py::test_market_spot_range",
+    "test_outputs.py::test_market_rate_range"
+  ],
+  "schema_version": 1,
+  "tests": {
+    "test_outputs.py::test_active_status_and_price_validation": {
+      "priority": "supporting",
+      "rationale": "test active status and price validation；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.011
+    },
+    "test_outputs.py::test_audit_adjusted_reason_order_and_uniqueness": {
+      "priority": "schema",
+      "rationale": "test audit adjusted reason order and uniqueness；这验证结构、类型或序列化外观，失败会使下游无法稳定消费结果。",
+      "weight": 0.015
+    },
+    "test_outputs.py::test_audit_cancelled_records": {
+      "priority": "supporting",
+      "rationale": "test audit cancelled records；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.011
+    },
+    "test_outputs.py::test_audit_rejected_records": {
+      "priority": "boundary",
+      "rationale": "test audit rejected records；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_calendar_raises_longer_expiry": {
+      "priority": "core",
+      "rationale": "test calendar raises longer expiry；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_cancelled_price_fields": {
+      "priority": "supporting",
+      "rationale": "test cancelled price fields；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_cancelled_winner_has_no_fallback": {
+      "priority": "supporting",
+      "rationale": "test cancelled winner has no fallback；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_common_numeric_strike_grid": {
+      "priority": "supporting",
+      "rationale": "test common numeric strike grid；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_convexity_neighbor_average": {
+      "priority": "core",
+      "rationale": "test convexity neighbor average；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_cross_core_combination": {
+      "priority": "core",
+      "rationale": "test cross core combination；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_csv_encoding_and_exact_header": {
+      "priority": "supporting",
+      "rationale": "csv encoding and exact header；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_csv_row_count_and_structure": {
+      "priority": "supporting",
+      "rationale": "csv row count and structure；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_dividend_discount_formula": {
+      "priority": "core",
+      "rationale": "test dividend discount formula；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_entrypoint_and_empty_input": {
+      "priority": "supporting",
+      "rationale": "test entrypoint and empty input；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_expiry_syntax_and_range": {
+      "priority": "boundary",
+      "rationale": "expiry syntax and range；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_fatal_errors_preserve_existing_and_missing_outputs": {
+      "priority": "recovery",
+      "rationale": "test fatal errors preserve existing and missing outputs；这验证失败、重跑或恢复不变量，失败会造成旧数据和台账不一致。",
+      "weight": 0.025
+    },
+    "test_outputs.py::test_generated_dataset_full_baseline": {
+      "priority": "core",
+      "rationale": "test generated dataset full baseline；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_input_files_unchanged": {
+      "priority": "supporting",
+      "rationale": "strike syntax length and range；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_invalid_row_rejected_once_and_processing_continues": {
+      "priority": "boundary",
+      "rationale": "test invalid row rejected once and processing continues；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_iterative_sweeps_and_decimal_rounding": {
+      "priority": "core",
+      "rationale": "test iterative sweeps and decimal rounding；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_market_dividend_range": {
+      "priority": "boundary",
+      "rationale": "test market dividend range；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_max_adjustment_and_empty_surface": {
+      "priority": "supporting",
+      "rationale": "max adjustment and empty surface；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_midpoint_discounted_bounds_and_rate_bps": {
+      "priority": "core",
+      "rationale": "test midpoint discounted bounds and rate bps；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_numeric_strike_sort_and_monotonicity": {
+      "priority": "core",
+      "rationale": "test numeric strike sort and monotonicity；这是任务的主交付路径，失败意味着核心业务结果不可用。",
+      "weight": 0.075
+    },
+    "test_outputs.py::test_quote_id_syntax_and_occupation": {
+      "priority": "supporting",
+      "rationale": "test quote id syntax and occupation；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_quote_underlying_exact_match": {
+      "priority": "supporting",
+      "rationale": "test quote underlying exact match；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_rejected_released_rejected_transition": {
+      "priority": "boundary",
+      "rationale": "test rejected released rejected transition；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_repeat_is_byte_stable": {
+      "priority": "recovery",
+      "rationale": "test repeat is byte stable；这验证失败、重跑或恢复不变量，失败会造成旧数据和台账不一致。",
+      "weight": 0.025
+    },
+    "test_outputs.py::test_rerun_overwrites_all_outputs": {
+      "priority": "supporting",
+      "rationale": "venue syntax boundaries；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_revision_syntax_length_and_range": {
+      "priority": "boundary",
+      "rationale": "revision syntax length and range；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_strike_syntax_length_and_range": {
+      "priority": "boundary",
+      "rationale": "strike syntax length and range；这验证公开边界和拒收口径，失败会产生越界输入或错误放行。",
+      "weight": 0.019
+    },
+    "test_outputs.py::test_summary_serialization_and_exact_counts": {
+      "priority": "schema",
+      "rationale": "summary serialization and exact counts；这验证结构、类型或序列化外观，失败会使下游无法稳定消费结果。",
+      "weight": 0.015
+    },
+    "test_outputs.py::test_surface_schema_sorting_and_half_even_format": {
+      "priority": "schema",
+      "rationale": "test surface schema sorting and half even format；这验证结构、类型或序列化外观，失败会使下游无法稳定消费结果。",
+      "weight": 0.015
+    },
+    "test_outputs.py::test_venue_syntax_boundaries": {
+      "priority": "supporting",
+      "rationale": "venue syntax boundaries；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_winner_quote_id_tiebreak": {
+      "priority": "supporting",
+      "rationale": "test winner quote id tiebreak；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_winner_revision_priority": {
+      "priority": "supporting",
+      "rationale": "test winner revision priority；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    },
+    "test_outputs.py::test_winner_venue_tiebreak": {
+      "priority": "supporting",
+      "rationale": "test winner venue tiebreak；这补充验证外围业务约束，失败会降低交付完整性和可运维性。",
+      "weight": 0.01
+    }
+  },
+  "weight_policy": {
+    "basis": "business_priority",
+    "core_min_share": 0.5,
+    "version": 1
+  }
+}

@@ -1,0 +1,27 @@
+schema_version = "1.3"
+
+[task]
+name = "local/close-grid-handoff"
+authors = [{ name = "applepig" }]
+keywords = ["close-handoff", "quote-lineage", "strike-grid", "risk-report"]
+description = "Repair a closing quote handoff that must recover winner lineage and publish a stable risk grid."
+
+[agent]
+timeout_sec = 3600
+
+[environment]
+build_timeout_sec = 600
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+allow_internet = true
+
+[verifier]
+timeout_sec = 300
+
+[metadata]
+difficulty = "hard"
+category = "scientific-computing"
+tags = ["option-pricing", "convex-surface", "quote-revisions", "deterministic-reporting"]
+expert_time_estimate = "4h"
